@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class UFOmovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody2D rb2d;
+    public int force;
     void Start()
     {
-        Debug.Log("HelloWorld");
+        rb2d = GetComponent<Rigidbody2D>(); 
+        
+            
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+            rb2d.AddForce(movement * force);
     }
 }
