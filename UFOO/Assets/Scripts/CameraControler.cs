@@ -9,6 +9,8 @@ public class CameraControler : MonoBehaviour
     void Start()
     {
         offset= transform.position - player.transform.position; 
+        // obliczamy odstep pomiedzy kamera a ufo(graczem)
+
         
     }
 
@@ -16,7 +18,7 @@ public class CameraControler : MonoBehaviour
     void Update()
     {
         transform.position = offset + player.transform.position;
-        // oblicza pozyzje kamery za pomoca lokalizacuji aktualnej gracza 
+        // oblicza pozyzje kamery za pomoca lokalizacji aktualnej gracza 
         
     }
 }
