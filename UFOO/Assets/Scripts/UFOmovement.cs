@@ -39,6 +39,10 @@ public class UFOmovement : MonoBehaviour
     void UpdateText()
     {
         score.text = count.ToString();
+        if (count == 6)
+        {
+            winText.gameObject.SetActive(true);
+        }
 
 
     }
