@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class UFOmovement : MonoBehaviour
 {
     Rigidbody2D rb2d;
     public int force;
+    public Text score;
+    public Text winText;
+    float count = 0;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); 
@@ -26,5 +32,24 @@ public class UFOmovement : MonoBehaviour
     {
         if (obiekt.gameObject.CompareTag("PIKAP"))
             Destroy(obiekt.gameObject);
+        count++;
+        UpdateText();
     }
+
+    void UpdateText()
+    {
+        score.text = count.ToString();
+
+
+    }
+
+
+
+
+
+
 }
+
+
+
+
