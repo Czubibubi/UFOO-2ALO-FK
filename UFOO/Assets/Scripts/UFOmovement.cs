@@ -21,4 +21,10 @@ public class UFOmovement : MonoBehaviour
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
             rb2d.AddForce(movement * force);
     }
+
+    private void OnTriggerEnter2D(Collider2D obiekt)
+    {
+        if (obiekt.gameObject.CompareTag("PIKAP"))
+            Destroy(obiekt.gameObject);
+    }
 }
