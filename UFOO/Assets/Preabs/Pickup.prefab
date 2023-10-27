@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 341249839871804392}
   - component: {fileID: 8698849983602906245}
   - component: {fileID: 6750082238238866646}
+  - component: {fileID: -669482314300824585}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: PIKAP
@@ -120,3 +121,16 @@ CircleCollider2D:
   m_Offset: {x: 0.008249521, y: 0.013488054}
   serializedVersion: 2
   m_Radius: 0.9189799
+--- !u!114 &-669482314300824585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492158730105081311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab424820f12edcd47a8197d971018e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 95
