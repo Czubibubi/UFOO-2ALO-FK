@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -12,29 +13,40 @@ public class UFOmovement : MonoBehaviour
     public Text score;
     public Text winText;
     float count = 0;
+    private AudioSource audioSource;
+    public AudioClip coinSound;
+    public AudioClip backgrouAudio;
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>(); 
-        
-            
+        rb2d = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(backgrouAudio);
+        audioSource.loop = true;
+
+
     }
 
-    
+
     void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-            rb2d.AddForce(movement * force);
+        rb2d.AddForce(movement * force);
     }
 
     private void OnTriggerEnter2D(Collider2D obiekt)
     {
         if (obiekt.gameObject.CompareTag("PIKAP"))
+        {
+            audioSource.PlayOneShot(coinSound);
             Destroy(obiekt.gameObject);
-        count++;
-        UpdateText();
+            count++;
+            UpdateText();
+        }
     }
+
+
 
     void UpdateText()
     {
@@ -45,14 +57,15 @@ public class UFOmovement : MonoBehaviour
         }
 
 
-    }
-
-
-
-
-
-
+    } 
 }
+
+
+
+
+
+
+
 
 
 
