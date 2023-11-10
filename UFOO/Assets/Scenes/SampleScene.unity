@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 198453663}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,6 +683,7 @@ GameObject:
   - component: {fileID: 741474687}
   - component: {fileID: 741474688}
   - component: {fileID: 741474689}
+  - component: {fileID: 741474690}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -932,6 +933,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &741474690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741474683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4562defe6e085424cad61b6f5d48ac47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallHitSound: {fileID: 8300000, guid: 482db06e89ed88a45a570d75efbb9731, type: 3}
+  Baunce: {fileID: 8300000, guid: 482db06e89ed88a45a570d75efbb9731, type: 3}
 --- !u!1 &744746121
 GameObject:
   m_ObjectHideFlags: 0
