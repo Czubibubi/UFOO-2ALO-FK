@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PIKAP
   - Wall
+  - Monster
+  - UFO
   layers:
   - Default
   - TransparentFX
@@ -51,4 +53,7 @@ TagManager:
     locked: 0
   - name: UFO
     uniqueID: 2614614371
+    locked: 0
+  - name: Ghosts
+    uniqueID: 1875366527
     locked: 0
